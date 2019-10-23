@@ -30,7 +30,7 @@ public class TSERepositoryImpl implements TSERepository {
 		int i = 1;
 		try {
 			conn = DbConnect.getConn();
-			cll = conn.prepareCall("{? = call fcubslive.TransactionStatusQuery.getStatus(?,?,?,?,?)}");
+			cll = conn.prepareCall("{? = call TransactionStatusQuery.getStatus(?,?,?,?,?)}");
 			cll.registerOutParameter(1, OracleTypes.VARCHAR);
 			cll.setString(++i, request.getRrn());
 			cll.setString(++i, request.getStan());
