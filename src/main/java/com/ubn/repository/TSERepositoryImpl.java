@@ -20,6 +20,8 @@ public class TSERepositoryImpl implements TSERepository {
 
 	static Logger LOGGER = LoggerFactory.getLogger(TSERepositoryImpl.class);
 	static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+	//New Date conversion done to match the DB object caot_date
 	static SimpleDateFormat sdf2 = new SimpleDateFormat("MMdd");
 	@Override
 	public TseResponse getStatus(TseRequest request) {
