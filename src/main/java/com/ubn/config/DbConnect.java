@@ -17,7 +17,7 @@ public class DbConnect {
 	
 	static Logger Loger = LoggerFactory.getLogger(DbConnect.class);
 	
-	public static Connection getConn() {
+	public static Connection getConn1() {
 		Context initCtx = null;
 		DataSource ds = null;
 		Connection conn = null;
@@ -37,7 +37,7 @@ public class DbConnect {
 		return conn;
 	}
 	
-	public static Connection getConn1() {
+	public static Connection getConn() {
 		Connection connection = null;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
